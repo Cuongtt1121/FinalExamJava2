@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="1237.0" style="-fx-background-color: #EEEEEE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appthuexe.controller.ThueXeController">
+   <children>
+      <TableView fx:id="tbView" layoutX="189.0" layoutY="160.0" prefHeight="300.0" prefWidth="1028.0" style="-fx-border-radius: 10;">
+        <columns>
+          <TableColumn fx:id="TCId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="TCBrand" prefWidth="155.0" text="Hãng" />
+            <TableColumn fx:id="TCModel" prefWidth="236.0" text="Tên Xe" />
+            <TableColumn fx:id="TCBien" prefWidth="179.0" text="Biển Số" />
+            <TableColumn fx:id="TCPrice" prefWidth="178.0" text="Giá" />
+            <TableColumn fx:id="TCStatus" prefWidth="204.0" text="Trạng Thái" />
+        </columns>
+      </TableView>
+      <Pane prefHeight="476.0" prefWidth="175.0" style="-fx-background-color: #CCCCCC;">
+         <children>
+            <Text layoutX="14.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bá Thành">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhân viên" />
+            <FontAwesomeIcon glyphName="USER" layoutX="52.0" layoutY="106.0" size="5em" />
+            <Button layoutY="197.0" mnemonicParsing="false" onAction="#Home" prefHeight="45.0" prefWidth="175.0" text="Trang Chủ" />
+            <Button layoutY="256.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="175.0" text="Thuê Xe" />
+            <Button layoutY="314.0" mnemonicParsing="false" onAction="#ThemXe" prefHeight="45.0" prefWidth="175.0" text="Thêm Xe" />
+         </children>
+      </Pane>
+      <Pane layoutX="189.0" layoutY="14.0" prefHeight="141.0" prefWidth="1028.0" style="-fx-background-color: #CCCCCC; -fx-background-radius: 5;">
+         <children>
+            <Label layoutX="537.0" layoutY="21.0" text="Ngày Thuê:" />
+            <TextField id="telcus" layoutX="130.0" layoutY="57.0" prefHeight="31.0" prefWidth="175.0" />
+            <Label layoutX="23.0" layoutY="62.0" text="Điện Thoại:" />
+            <TextField id="namecus" layoutX="130.0" layoutY="16.0" prefHeight="31.0" prefWidth="175.0" />
+            <Label layoutX="18.0" layoutY="21.0" text="Khách Hàng:" />
+            <Label layoutX="322.0" layoutY="62.0" text="Mẫu:" />
+            <Label layoutX="319.0" layoutY="21.0" text="Hãng:" />
+            <ComboBox fx:id="rentCarModel" layoutX="375.0" layoutY="55.0" onAction="#modelChange" prefWidth="150.0" promptText="Choose....." />
+            <ComboBox fx:id="rentCarBrand" layoutX="375.0" layoutY="16.0" onAction="#brandChange" prefWidth="150.0" promptText="Choose....." />
+            <Label layoutX="543.0" layoutY="62.0" text="Ngày Trả:" />
+            <DatePicker fx:id="dateReturn" layoutX="621.0" layoutY="57.0" onAction="#dateRt" prefHeight="31.0" prefWidth="175.0" />
+            <DatePicker fx:id="dateRented" layoutX="621.0" layoutY="16.0" onAction="#dateRent" prefHeight="31.0" prefWidth="175.0" />
+            <Button layoutX="813.0" layoutY="57.0" mnemonicParsing="false" onAction="#Submit" prefHeight="31.0" prefWidth="122.0" text="Thuê" />
+            <Text fx:id="total" layoutX="874.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="95.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text layoutX="813.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Label layoutX="322.0" layoutY="96.0" text="Biển:" />
+            <ComboBox fx:id="rentCarBien" layoutX="375.0" layoutY="91.0" onAction="#modelChange" prefWidth="150.0" promptText="Choose....." />
+         </children>
+      </Pane>
+   </children>
+</Pane>
